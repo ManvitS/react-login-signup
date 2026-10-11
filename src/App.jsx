@@ -10,20 +10,26 @@ export default function App() {
       {/* Toggle Buttons */}
       <div className="bg-gray-300 p-1 rounded-lg flex gap-2 mb-6">
         <button
+          type="button"
           onClick={() => setIsLogin(true)}
-          className={`px-4 py-2 rounded-md font-medium ${isLogin ? 'bg-white text-blue-600' : 'text-gray-700 hover:text-black'}`}
+          className={`px-4 py-2 rounded-md font-medium text-sm ${
+            isLogin ? 'bg-white text-blue-600' : 'text-gray-700 hover:text-black'
+          }`}
         >
           Login
         </button>
         <button
+          type="button"
           onClick={() => setIsLogin(false)}
-          className={`px-4 py-2 rounded-md font-medium ${!isLogin ? 'bg-white text-blue-600' : 'text-gray-700 hover:text-black'}`}
+          className={`px-4 py-2 rounded-md font-medium text-sm ${
+            !isLogin ? 'bg-white text-blue-600' : 'text-gray-700 hover:text-black'
+          }`}
         >
           Signup
         </button>
       </div>
 
-      {/* Forms ko  render karein */}
+      {/* Render the form */}
       {isLogin ? (
         <LoginForm onSwitchToSignup={() => setIsLogin(false)} />
       ) : (

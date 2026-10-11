@@ -67,8 +67,12 @@ const LoginForm = ({ onSwitchToSignup }) => {
       </form>
 
       <p className="text-center text-sm text-gray-600 mt-6">
-        Don't have an account?
-        <button onClick={onSwitchToSignup} className="text-blue-600 font-medium hover:underline">
+        Don't have an account?{' '}
+        <button
+          onClick={onSwitchToSignup}
+          type="button"
+          className="text-blue-600 font-medium hover:underline"
+        >
           Sign up
         </button>
       </p>
